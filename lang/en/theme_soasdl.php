@@ -35,17 +35,14 @@ $string['choosereadme'] = '
 <p>This theme is based upon the Bootstrap theme, which was created for Moodle 2.5, with the help of:<br>
 Stuart Lamour, Mark Aberdour, Paul Hibbitts, Mary Evans.</p>
 <h3>Theme Credits</h3>
-<p>Authors: Bas Brands, David Scotson, Mary Evans<br>
-Contact: bas@sonsbeekmedia.nl<br>
-Website: <a href="http://www.basbrands.nl">www.basbrands.nl</a>
+<p>Authors: Bas Brands, David Scotson, Mary Evans, Abdul Bashet<br>
+Contact: a_bashet@yahoo.com<br>
 </p>
 <h3>Report a bug:</h3>
-<p><a href="http://tracker.moodle.org">http://tracker.moodle.org</a></p>
-<h3>More information</h3>
 <p><a href="soasdl/README.txt">How to copy and customise this theme.</a></p>
 </div></div>';
 
-$string['configtitle'] = 'soasdl';
+$string['configtitle'] = 'Soasdl';
 
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'Whatever CSS rules you add to this textarea will be reflected in every page, making for easier customization of this theme.';
