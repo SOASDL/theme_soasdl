@@ -57,3 +57,5 @@ $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
 );
+
+//$THEME->enable_dock = true;
