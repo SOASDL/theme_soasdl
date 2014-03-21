@@ -60,6 +60,11 @@ echo $OUTPUT->doctype() ?>
                 <span class="icon-bar"></span>
             </a>
             <div class="nav-collapse collapse">
+                <a class="btn btn-primary" href="">link 1</a>
+                <a class="btn btn-success" href="">link 2</a>
+                <a class="btn btn-info" href="">link 3</a>
+                <a class="btn btn-danger" href="">link 4</a>
+
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
