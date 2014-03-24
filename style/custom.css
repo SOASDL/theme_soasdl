@@ -19,3 +19,15 @@ a.logo {
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
+
+/*Added by Abdul
+----------------------------------------
+.header {
+    background: none repeat scroll 0 0 inactivecaption;
+    margin-top: -8px;
+}
+
+.block {
+    background-color: #FAF0E6;
+}
+*/
