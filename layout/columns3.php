@@ -64,6 +64,7 @@ echo $OUTPUT->doctype() ?>
                 <a class="btn btn-success" href="">link 2</a>
                 <a class="btn btn-info" href="">link 3</a>
                 <a class="btn btn-danger" href="">link 4</a>
+                <a class="btn btn-warning" href="">link 4</a>
 
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
