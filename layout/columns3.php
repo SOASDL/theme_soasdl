@@ -59,13 +59,24 @@ echo $OUTPUT->doctype() ?>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <div class="nav-collapse collapse">
-                <a class="btn btn-primary" href="">link 1</a>
-                <a class="btn btn-success" href="">link 2</a>
-                <a class="btn btn-info" href="">link 3</a>
-                <a class="btn btn-danger" href="">link 4</a>
-                <a class="btn btn-warning" href="">link 4</a>
 
+            <div class="nav-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
@@ -79,7 +90,27 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
 
     <header id="page-header" class="clearfix">
-        <?php echo $html->heading; ?>
+        <div class="header" style="width: 100%;display: block;">
+            <div style="float: left;height: 100px;width: 100px; background: gold">logo1</div>
+            <div style="float: right;height: 100px;width: 100px; background: rosybrown">logo2</div>
+        </div>
+        <div class="clearfix"></div>
+        <?php //echo $html->heading; ?>
+        <!-- custom header start -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">My Home</a>
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">My Profile</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">My Assignment</a></li>
+                    <li class="divider-vertical"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- custom header  finish-->
         <div id="page-navbar" class="clearfix">
             <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
             <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
