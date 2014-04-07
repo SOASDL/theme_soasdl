@@ -91,9 +91,11 @@ echo $OUTPUT->doctype() ?>
 
     <header id="page-header" class="clearfix">
         <div class="header" style="width: 100%;display: block;">
-            <div style="float: left;height: 100px;width: 100px; background: gold">logo1</div>
-            <div style="float: right;height: 100px;width: 100px; background: rosybrown">logo2</div>
+            <div style="float: left;"><img src="<?php echo $OUTPUT->pix_url('slogo', 'theme'); ?>" alt="" /></div>
+            <div style="float: right;"><img src="<?php echo $OUTPUT->pix_url('ulogo', 'theme'); ?>" alt="" /></div>
         </div>
+        <div class="clearfix"></div>
+        <div class="login_info"><?php echo $OUTPUT->login_info() ?></div>
         <div class="clearfix"></div>
         <?php //echo $html->heading; ?>
         <!-- custom header start -->
@@ -110,6 +112,7 @@ echo $OUTPUT->doctype() ?>
                 </ul>
             </div>
         </div>
+        <hr>
         <!-- custom header  finish-->
         <div id="page-navbar" class="clearfix">
             <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
