@@ -55,10 +55,10 @@ echo $OUTPUT->doctype() ?>
     <header id="page-header" class="clearfix">
         <div class="header logo_area">
             <div style="float: left;"><a href="<?php echo $CFG->wwwroot;?>"><img src="<?php echo $OUTPUT->pix_url('slogo', 'theme'); ?>" alt="SOAS Distance Learning" /></a> </div>
-            <div style="float: right;"><img src="<?php echo $OUTPUT->pix_url('ulogo', 'theme'); ?>" alt="" /></div>
+            <div style="float: right;"><a href="http://www.londoninternational.ac.uk/" target="_blank"><img src="<?php echo $OUTPUT->pix_url('ulogo', 'theme'); ?>" alt="University of London International Programme" /></a> </div>
         </div>
         <div class="clearfix"></div>
-        <div class="login_info"><?php echo $OUTPUT->login_info() ?></div>
+
         <div class="clearfix"></div>
         <?php //echo $html->heading; ?>
         <!-- custom header start -->
@@ -79,6 +79,7 @@ echo $OUTPUT->doctype() ?>
                     <li><a href="#">Another external link</a></li>
                     <li class="divider-vertical"></li>
                 </ul>
+                <div class="login_info"><?php echo $OUTPUT->login_info() ?></div>
             </div>
         </div>
         <hr>
