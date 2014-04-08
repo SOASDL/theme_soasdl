@@ -22,8 +22,18 @@ a.logo {
 
 /*Added by Abdul
 ----------------------------------------*/
+.header {
+    background: none repeat scroll 0 0 #00859b;
+    margin-top: -8px;
+}
+
 .block {
     background-color: #F5F5F5;
+}
+
+.block .header h2 {
+    color: #FFFFFF;
+    text-shadow: none;
 }
 
 
