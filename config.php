@@ -60,7 +60,7 @@ $THEME->blockrtlmanipulations = array(
 $THEME->javascripts = array(
 );
 $THEME->javascripts_footer = array(
-    'soasdl'
+    'jquery-1.11.0.min','soasdl'
 );
 
 //$THEME->enable_dock = true;
