@@ -57,5 +57,10 @@ $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
 );
+$THEME->javascripts = array(
+);
+$THEME->javascripts_footer = array(
+    'soasdl'
+);
 
 //$THEME->enable_dock = true;

@@ -62,26 +62,40 @@ echo $OUTPUT->doctype() ?>
         <div class="clearfix"></div>
         <?php //echo $html->heading; ?>
         <!-- custom header start -->
-        <div class="navbar">
-            <div class="navbar-inner">
-                <a class="brand" href="#">Home</a>
-                <ul class="nav">
-                    <li class="active"><a href="#">My Course</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">My Profile</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">Study Skills</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">Library</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">Another external link</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">Another external link</a></li>
-                    <li class="divider-vertical"></li>
-                </ul>
-                <div class="login_info"><?php echo $OUTPUT->login_info() ?></div>
-            </div>
-        </div>
+        <header role="banner" id="my_header" class="navbar<?php echo $html->navbarclass ?>">
+            <nav role="navigation" class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="<?php echo $CFG->wwwroot;?>">Home</a>
+                    <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">My Course</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#">My Profile</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#">Study Skills</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#">Another external link</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#">Another external link</a></li>
+                            <li class="divider-vertical"></li>
+                        </ul>
+
+                        <?php echo $OUTPUT->custom_menu(); ?>
+                        <ul class="nav pull-right">
+                            <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
+                            <li class="navbar-text"><?php echo $OUTPUT->login_info() ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <hr>
         <!-- custom header  finish-->
         <div id="page-navbar" class="clearfix">
