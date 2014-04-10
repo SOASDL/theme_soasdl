@@ -48,7 +48,7 @@ a.logo {
 }
 body {
     padding-top: 10px;
-    font-family: MuseoSans-300;
+    font-family: MuseoSans-300 !important;
 }
 
 .logo_area {
