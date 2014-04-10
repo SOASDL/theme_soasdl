@@ -38,7 +38,7 @@ $THEME->name = 'soasdl';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom','font-awesome');
+$THEME->sheets = array('custom','font-awesome','soasdlfonts');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 
