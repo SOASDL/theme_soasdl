@@ -49,8 +49,10 @@ a.logo {
 }
 
 .path-my .coursebox .overview {
-    margin: 15px 10px 10px;
-    padding-top: 10px;
+    background: none repeat scroll 0 0 #EEF8FA;
+    margin: 0;
+    margin-top: 2px;
+    padding: 12px;
 }
 
 .path-my .coursebox .info {
