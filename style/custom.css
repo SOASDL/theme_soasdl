@@ -31,6 +31,7 @@ a.logo {
     color: #FFFFFF;
     text-shadow: none;
 }
+/* To adjust with my moodle block */
 .block_my_moodle.block {
     background: none repeat scroll 0 0 #FFFFFF;
 }
@@ -46,6 +47,18 @@ a.logo {
     margin-bottom: 0;
     padding: 0;
 }
+
+.path-my .coursebox .overview {
+    margin: 15px 10px 10px;
+    padding-top: 10px;
+}
+
+.path-my .coursebox .info {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+/*End of my moodle area*/
 
 .btn:focus{
     outline:thin dotted transparent;
