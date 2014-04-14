@@ -27,27 +27,6 @@ a.logo {
     margin-top: -8px;
 }
 
-.block_my_moodle.block {
-    background: none repeat scroll 0 0 #FFFFFF;
-}
-
-.block .header h2 {
-    color: #FFFFFF;
-    text-shadow: none;
-}
-
-.block_my_moodle .content {
-    margin: 0;
-    padding: 0;
-}
-
-.coursebox {
-    border: none;
-    border-radius: 0;
-    margin-bottom: 0;
-    padding: 0;
-}
-
 
 .btn:focus{
     outline:thin dotted transparent;
