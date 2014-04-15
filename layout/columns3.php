@@ -65,7 +65,7 @@ echo $OUTPUT->doctype() ?>
         <header role="banner" id="my_header" class="navbar<?php echo $html->navbarclass ?>">
             <nav role="navigation" class="navbar-inner">
                 <div class="container-fluid">
-                    <a class="brand" href="<?php echo $CFG->wwwroot;?>">Home</a>
+                    <a class="brand" href="<?php echo $CFG->wwwroot;?>?redirect=0">Home</a>
                     <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -73,9 +73,9 @@ echo $OUTPUT->doctype() ?>
                     </a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">My Course</a></li>
+                            <li class=""><a href="<?php echo $CFG->wwwroot;?>">My Course</a></li>
                             <li class="divider-vertical"></li>
-                            <li><a href="#">My Profile</a></li>
+                            <li><a href="<?php echo $CFG->wwwroot;?>/user/profile.php">My Profile</a></li>
                             <li class="divider-vertical"></li>
                             <li><a href="#">Study Skills</a></li>
                             <li class="divider-vertical"></li>
