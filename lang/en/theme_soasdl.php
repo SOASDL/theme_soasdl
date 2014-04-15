@@ -62,4 +62,5 @@ $string['pluginname'] = 'soasdl';
 
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
+$string['region-side-content'] = 'content';
 

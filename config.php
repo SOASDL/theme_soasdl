@@ -63,4 +63,14 @@ $THEME->javascripts_footer = array(
     'jquery-1.11.0.min','soasdl'
 );
 
+$THEME->layouts = array(
+    // My dashboard page.
+    'mydashboard' => array(
+        'file' => 'columns3.php',
+        'regions' => array('side-pre', 'side-post', 'content'),
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu'=>true),
+    ),
+);
+
 //$THEME->enable_dock = true;
