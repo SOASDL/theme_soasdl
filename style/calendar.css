@@ -58,12 +58,27 @@
     font-weight: bold;
 }
 .calendar-event-panel .eventcontent {
-    border-bottom: thin solid #D3D3D3;
-    border-top: thin solid #D3D3D3;
+    border-top: thin solid #888888;
+    border-bottom: thin solid #888888;
     margin: 5px;
     padding: 5px;
     text-align: left;
     color: #f5f5f5;
+}
+
+.eventcontent > div:first-child{
+    border: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.eventcontent > div {
+    border-top: thin solid #888888;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.eventcontent > div:hover {
+    background: #00859b;
 }
 
 .calendar-event-panel .eventcontent > div > a {
