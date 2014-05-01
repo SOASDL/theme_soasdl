@@ -4,7 +4,7 @@
 }
 .calendartable th, .calendartable td {
     border: -1px;
-    width: auto;
+    width: 20px;
 }
 .hasevent {
     background: none repeat scroll 0 0 #cca1a6;
@@ -35,7 +35,7 @@
 .calendar-event-panel {
     border-radius: 5px;
     padding: 5px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .calendar-event-panel h2 {
