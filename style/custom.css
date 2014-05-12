@@ -50,10 +50,9 @@ a.logo {
 
 .path-my .coursebox .overview {
     background: none repeat scroll 0 0 #EEF8FA;
-    border-bottom: thin solid #D3D3D3;
     margin: 0;
-    margin-top: 12px;
-    padding: 0 15px 22px;
+    margin-top: 2px;
+    padding: 12px 12px 21px;
 }
 
 .path-my .coursebox .info {
