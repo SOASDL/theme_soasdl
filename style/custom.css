@@ -120,6 +120,10 @@ body {
 .login_tab_content{
     background: none repeat scroll 0 0 #00859B;
     padding: 25px;
+    color: #FFFFFF;
+}
+.login_tab_content a{
+    color: #FFFFFF;
 }
 .login_tab_content h2{
     display: inline;
@@ -133,16 +137,25 @@ body {
     display: inline;
 }
 .login_tab_content .loginform{
-    display: inline-flex;
+    display: table;
+    margin: 0 auto;
 }
-.loginform label {
-    display: block;
+.loginform > div {
+    float: left;
+    padding-right: 30px;
 }
-.loginform .form-label{
-    display: block;
+.loginform > div > div{
+
 }
-.loginform .form-input{
-    display: block;
+#loginbtn {
+    margin-left: 25px;
+    background: none repeat scroll 0 0 #2E9FB1;
+    border: #2E9FB1;
+    color: #ffffff;
 }
+.desc {
+    text-align: center;
+}
+
 
 /*==============================================================*/

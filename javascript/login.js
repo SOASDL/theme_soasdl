@@ -7,7 +7,8 @@ $(function(){
 
     var loginpanel  = $('.loginpanel');
     var signuppanel = $('.signuppanel');
-    var subcontent  = $('.subcontent');
+    var rememberpass = $('.rememberpass');
+    var forgetpass  = $('.forgetpass');
 
     var loginbox    = $('.loginbox');
 
@@ -24,7 +25,6 @@ $(function(){
     main.append(nav+content);
     $('#loginarea').html(loginpanel);
     $('#signup').html(signuppanel);
-    //$('#subcontent').html(subcontent);
     loginbox.css('display','none');
 
     $('#login_page_tab a').click(function (e) {
@@ -34,6 +34,30 @@ $(function(){
 
     var login_h2 = loginpanel.children()[0];
     login_h2.remove();
+    $('.clearer').remove();
+
+
+
+    var left    = $('<div id="left"></div>');
+    var right   = $('<div id="right"></div>');
+
+    var label   = $('.form-label');
+    var input   = $('.form-input');
+
+
+    left.append(label[0]);
+    left.append(input[0]);
+    left.append(rememberpass);
+
+    forgetpass.html('<i class="fa fa-angle-right"></i>  ' + forgetpass.html());
+    right.append(label[1]);
+    right.append(input[1]);
+    right.append(forgetpass);
+
+    var login_form = $('.loginform');
+    login_form.html('');
+    login_form.append(left);
+    login_form.append(right);
 
     $('#login').append('<hr>');
 
