@@ -45,7 +45,7 @@ echo $OUTPUT->doctype() ?>
     </header>
     <hr>
     <div id="page-content" class="row-fluid">
-        <section id="region-main" class="span12">
+        <section id="region-main" class="span12 saosdl_login">
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();

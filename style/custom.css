@@ -88,4 +88,42 @@ body {
     padding-bottom: 10px;
 }
 
+.login_nav{
+    margin-bottom: 0;
+}
+.login_nav li.active{
+    /*margin-left: -1px;*/
+}
+.login_nav li.active a{
+    background: none repeat scroll 0 0 #00859B;
+    color: #ffffff;
+}
+.login_nav li.active a:hover{
+    background: none repeat scroll 0 0 #00859B;
+    color: #ffffff;
+}
+.login_nav li.active a:focus{
+    background: none repeat scroll 0 0 #00859B;
+    color: #ffffff;
+}
+.login_nav li.active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border-color: transparent;
+}
+.login_nav li a:hover{
+    background: none repeat scroll 0 0 lightgrey;
+    color: #00859B;
+}
+.login_nav li a{
+    background: none repeat scroll 0 0 #F5F5F5;
+    color: #00859B;
+}
+.login_tab_content{
+    background: none repeat scroll 0 0 #00859B;
+    /*padding-bottom: 20px;
+    padding-left: 50px;*/
+}
+.login_tab_content h2{
+    padding-left: 50px;
+}
+
 /*==============================================================*/

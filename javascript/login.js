@@ -11,12 +11,12 @@ $(function(){
 
     var loginbox    = $('.loginbox');
 
-    var nav =   '<ul class="nav nav-tabs" id="login_page_tab">'+
+    var nav =   '<ul class="nav nav-tabs login_nav" id="login_page_tab">'+
                     '<li class="active"><a href="#loginarea" data-toggle="tab">Sign in</a></li>'+
                     '<li><a href="#signup" data-toggle="tab">New to the site</a></li>'+
                 '</ul>'
                 ;
-    var content =   '<div class="tab-content">'+
+    var content =   '<div class="tab-content login_tab_content">'+
                         '<div class="tab-pane active" id="loginarea">aaa</div>'+
                         '<div class="tab-pane" id="signup">bbb</div>'+
                     '</div>';
@@ -31,5 +31,7 @@ $(function(){
         e.preventDefault();
         $(this).tab('show');
     })
+
+    $('#login').append('<hr>');
 
 });
