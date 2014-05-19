@@ -3,21 +3,29 @@
  */
 
 $(function(){
-    var main = $('#region-main');
-    var loginbox = $('.loginbox');
+    var main        = $('#region-main');
+
+    var loginpanel  = $('.loginpanel');
+    var signuppanel = $('.signuppanel');
+    var subcontent  = $('.subcontent');
+
+    var loginbox    = $('.loginbox');
+
     var nav =   '<ul class="nav nav-tabs" id="login_page_tab">'+
-                    '<li class="active"><a href="#home" data-toggle="tab">Sign in</a></li>'+
-                    '<li><a href="#profile" data-toggle="tab">New to the site</a></li>'+
-                    '<li><a href="#messages" data-toggle="tab">Mahara</a></li>'+
+                    '<li class="active"><a href="#loginarea" data-toggle="tab">Sign in</a></li>'+
+                    '<li><a href="#signup" data-toggle="tab">New to the site</a></li>'+
                 '</ul>'
                 ;
     var content =   '<div class="tab-content">'+
-                        '<div class="tab-pane active" id="home">aaaaaaaaaaaaaaa</div>'+
-                        '<div class="tab-pane" id="profile">bbbbbbbbbbbbbbbbbbb</div>'+
-                        '<div class="tab-pane" id="messages">cccccccccccccccccc</div>'+
+                        '<div class="tab-pane active" id="loginarea">aaa</div>'+
+                        '<div class="tab-pane" id="signup">bbb</div>'+
                     '</div>';
 
     main.append(nav+content);
+    $('#loginarea').html(loginpanel);
+    $('#signup').html(signuppanel);
+    //$('#subcontent').html(subcontent);
+    loginbox.css('display','none');
 
     $('#login_page_tab a').click(function (e) {
         e.preventDefault();
