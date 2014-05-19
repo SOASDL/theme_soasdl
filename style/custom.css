@@ -119,11 +119,30 @@ body {
 }
 .login_tab_content{
     background: none repeat scroll 0 0 #00859B;
-    /*padding-bottom: 20px;
-    padding-left: 50px;*/
+    padding: 25px;
 }
 .login_tab_content h2{
-    padding-left: 50px;
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.login_tab_content .loginsub{
+    display: inline;
+}
+.login_tab_content form{
+    display: inline;
+}
+.login_tab_content .loginform{
+    display: inline-flex;
+}
+.loginform label {
+    display: block;
+}
+.loginform .form-label{
+    display: block;
+}
+.loginform .form-input{
+    display: block;
 }
 
 /*==============================================================*/

@@ -32,6 +32,11 @@ $(function(){
         $(this).tab('show');
     })
 
+    var login_h2 = loginpanel.children()[0];
+    login_h2.remove();
+
     $('#login').append('<hr>');
+
+
 
 });
