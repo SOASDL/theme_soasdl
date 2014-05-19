@@ -30,7 +30,7 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<div id="page" class="container-fluid">
+<div id="page" class="container">
 
     <header id="page-header" class="clearfix">
         <div class="logo_area">
@@ -43,7 +43,7 @@ echo $OUTPUT->doctype() ?>
             <?php echo $OUTPUT->course_header(); ?>
         </div>
     </header>
-
+    <hr>
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="span12">
             <?php
