@@ -71,6 +71,11 @@ $THEME->layouts = array(
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
+    'login' => array(
+        'file' => 'login.php',
+        'regions' => array(),
+        'options' => array('langmenu'=>true),
+    ),
 );
 
 //$THEME->enable_dock = true;
