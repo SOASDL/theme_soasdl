@@ -59,6 +59,7 @@ echo $OUTPUT->doctype() ?>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
+    <script src="<?php echo $CFG->wwwroot?>/theme/soasdl/javascript/login.js"></script>
 
 </div>
 </body>
