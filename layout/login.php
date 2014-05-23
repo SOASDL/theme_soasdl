@@ -24,6 +24,7 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
@@ -49,8 +50,28 @@ echo $OUTPUT->doctype() ?>
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
+            //echo 'gfdgd';
+            /*
+             * site news and enrolment deadlines
+             */
+            /*echo html_writer::start_tag('div', array('id'=>'site-news-forum'));
+            global $SITE;
+            $newsforum = forum_get_course_forum($SITE->id, 'news');
+            forum_print_latest_discussions($SITE, $newsforum, $SITE->newsitems, 'plain', 'p.modified DESC');
+            echo html_writer::end_tag('div');*/
+            // site news end
             echo $OUTPUT->course_content_footer();
             ?>
+        </section>
+        <section id="login_extra">
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="login_header"><span>Enrolment Deadlines</span></div>
+                </div>
+                <div class="span6">
+                    <div class="login_header"><span>Latest News</span></div>
+                </div>
+            </div>
         </section>
     </div>
 
