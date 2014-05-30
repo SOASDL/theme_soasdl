@@ -176,7 +176,7 @@ function soasdl_set_customcss($css, $customcss) {
 function get_latest_news(){
     global $DB;
 
-    $sql = 'select post.subject as subject, post.message as message, post.modified as date
+    $sql = 'select post.id as id, post.subject as subject, post.message as message, post.modified as date
             from mdl_forum_posts post
             INNER JOIN mdl_forum_discussions discus
             ON discus.firstpost = post.id

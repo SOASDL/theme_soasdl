@@ -61,6 +61,9 @@ $(function(){
 
     $('#login').append('<hr>');
 
+    var news = $('.login_news');
+    var test = 'test';
+
 
 
 });

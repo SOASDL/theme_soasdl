@@ -162,11 +162,11 @@ body {
     width: 100%;
     padding-top: 10px;
 }
-.span6 {
+.login_left,.login_right {
     margin-top: 20px;
     border: thin solid lightgray;
     border-radius: 5px;
-    height: 300px;
+
 }
 .login_header {
     display: block;
@@ -183,4 +183,29 @@ body {
     color: #ffffff;
 }
 
+.login_right {
+   background: none repeat scroll 0 0 #F0F0F0;
+}
+.login_news {
+    border-bottom: thin solid #D3D3D3;
+
+}
+.login_news_body {
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-top: 12px;
+}
+.login_news_subject {
+    font-weight: bolder;
+}
+.login_news_full {
+    color: #00859B;
+}
+.login_news_head{
+    padding: 5px 10px;
+}
+.login_news_head:hover{
+    background: #D3D3D3;
+    cursor: pointer;
+}
 /*==============================================================*/

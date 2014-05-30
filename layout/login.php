@@ -65,22 +65,23 @@ echo $OUTPUT->doctype() ?>
         </section>
         <section id="login_extra">
             <div class="row-fluid">
-                <div class="span6">
+                <div class="span6 login_left">
                     <div class="login_header"><span>Enrolment Deadlines</span></div>
                 </div>
-                <div class="span6">
+                <div class="span6 login_right">
                     <div class="login_header"><span>Latest News</span></div>
-                    <div class="news">
-                        <?php
-                        $news = get_latest_news();
-                        foreach($news as $n){
-                            echo '<div class="news_subject">'.$n->subject.'<span style="float:right" class="fa fa-angle-down"></span></div>';
-                            echo '<div class="news_date">'.date('l d F Y',$n->date).'</div>';
-                            echo '<div class="news_body">'.substr($n->message,0,350).'... </div>';
-                            echo '<span class="news_full">See full details</span>';
-                        }
-                        ?>
-                    </div>
+                    <?php
+                    $news = get_latest_news();
+                    foreach($news as $n){
+                        echo '<div class="login_news" id="'.$n->id.'">';
+                        echo '<div class="login_news_head">';
+                        echo '<div class="login_news_subject">'.$n->subject.'<span style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                        echo '<div class="login_news_date">'.date('l d F Y',$n->date).'</div>';
+                        echo '</div>';
+                        echo '<div class="login_news_body">'.substr($n->message,0,350).'... <br><span class="login_news_full">See full details</span></div>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
             </div>
         </section>
