@@ -70,10 +70,22 @@ echo $OUTPUT->doctype() ?>
                 </div>
                 <div class="span6">
                     <div class="login_header"><span>Latest News</span></div>
+                    <div class="news">
+                        <?php
+                        $news = get_latest_news();
+                        foreach($news as $n){
+                            echo '<div class="news_subject">'.$n->subject.'<span style="float:right" class="fa fa-angle-down"></span></div>';
+                            echo '<div class="news_date">'.date('l d F Y',$n->date).'</div>';
+                            echo '<div class="news_body">'.substr($n->message,0,350).'... </div>';
+                            echo '<span class="news_full">See full details</span>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
+    <!-- TODO: use lang string for above area. -->
 
     <footer id="page-footer">
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>

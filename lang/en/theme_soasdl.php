@@ -35,11 +35,10 @@ $string['choosereadme'] = '
 <p>This theme is based upon the Bootstrap theme, which was created for Moodle 2.5, with the help of:<br>
 Stuart Lamour, Mark Aberdour, Paul Hibbitts, Mary Evans.</p>
 <h3>Theme Credits</h3>
-<p>Authors: Bas Brands, David Scotson, Mary Evans, Abdul Bashet<br>
+<p>Authors: Abdul Bashet<br>
 Contact: a_bashet@yahoo.com<br>
 </p>
-<h3>Report a bug:</h3>
-<p><a href="soasdl/README.txt">How to copy and customise this theme.</a></p>
+
 </div></div>';
 
 $string['configtitle'] = 'Soasdl';
@@ -63,4 +62,7 @@ $string['pluginname'] = 'soasdl';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 $string['region-content'] = 'Content';
+$string['enrolment_deadlines']  = 'Enrolment Deadlines';
+$string['latest_news']          = 'Latest News';
+$string['see_full_details']     = 'See full details';
 

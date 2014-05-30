@@ -172,3 +172,17 @@ function soasdl_set_customcss($css, $customcss) {
     debugging('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__, DEBUG_DEVELOPER);
     return theme_soasdl_set_customcss($css, $customcss);
 }
+
+function get_latest_news(){
+    global $DB;
+
+    $sql = 'select post.subject as subject, post.message as message, post.modified as date
+            from mdl_forum_posts post
+            INNER JOIN mdl_forum_discussions discus
+            ON discus.firstpost = post.id
+            where discus.course = 1'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
