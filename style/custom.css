@@ -194,6 +194,7 @@ body {
     padding-left: 10px;
     padding-right: 40px;
     padding-top: 12px;
+    background: none repeat scroll 0 0 #F5F5F5;
 }
 .login_news_subject {
     font-weight: bolder;

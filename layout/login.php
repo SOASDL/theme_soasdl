@@ -73,12 +73,12 @@ echo $OUTPUT->doctype() ?>
                     <?php
                     $news = get_latest_news();
                     foreach($news as $n){
-                        echo '<div class="login_news" id="'.$n->id.'">';
-                        echo '<div class="login_news_head">';
+                        echo '<div class="login_news" id="news-'.$n->id.'">';
+                        echo '<div class="login_news_head" id="news_head-'.$n->id.'">';
                         echo '<div class="login_news_subject">'.$n->subject.'<span style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
                         echo '<div class="login_news_date">'.date('l d F Y',$n->date).'</div>';
                         echo '</div>';
-                        echo '<div class="login_news_body">'.substr($n->message,0,350).'... <br><span class="login_news_full">See full details</span></div>';
+                        echo '<div class="login_news_body" id="news_body-'.$n->id.'">'.substr($n->message,0,350).'... <br><span class="login_news_full">See full details</span></div>';
                         echo '</div>';
                     }
                     ?>
