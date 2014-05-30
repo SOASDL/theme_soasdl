@@ -64,19 +64,26 @@ $(function(){
     var news = $('.login_news');
     news.each(function(){
         var news_children = this.children;
-        var news_head = news_children[0];
-        var news_body = news_children[1];
-        news_body.hidden = true;
+        var news_body = $(news_children[1]);
+        news_body.hide();
     });
 
     var all_news_head = $('.login_news_head');
-    var test = 'test';
     all_news_head.on('click', function(){
         var news_head_ids = this.id;
         news_head_ids = news_head_ids.split('-');
-
         var news_body = $('#news_body-'+news_head_ids[1]);
+        var arrow = $('#arrow-'+news_head_ids[1]);
+
         news_body.slideToggle( "slow" );
+        if(arrow.hasClass('fa-angle-down') == true){
+            arrow.removeClass('fa-angle-down');
+            arrow.addClass('fa-angle-up');
+
+        }else{
+            arrow.removeClass('fa-angle-up');
+            arrow.addClass('fa-angle-down');
+        }
     });
 
 
