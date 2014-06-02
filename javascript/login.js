@@ -86,6 +86,15 @@ $(function(){
         }
     });
 
+    var see_details = $('.login_news_full');
+    see_details.click(function(){
+        var get_news_id = this.id.split('-');
+        news_id = get_news_id[1];
+        var actual_news = '#main_news-'+news_id;
+        $(actual_news).show();
+
+    });
+
 
 
 

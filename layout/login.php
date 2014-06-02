@@ -24,7 +24,8 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="<?php echo $CFG->wwwroot;?>/theme/soasdl/style/login.css">
+
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
@@ -78,8 +79,10 @@ echo $OUTPUT->doctype() ?>
                         echo '<div class="login_news_subject">'.$n->subject.'<span id="arrow-'.$n->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
                         echo '<div class="login_news_date">'.date('l d F Y',$n->date).'</div>';
                         echo '</div>';
-                        echo '<div class="login_news_body" id="news_body-'.$n->id.'">'.substr($n->message,0,350).'... <br><span class="login_news_full" id="full_news-'.$n->id.'">See full details</span></div>';
+                        echo '<div class="login_news_body" id="news_body-'.$n->id.'">'.substr($n->message,0,350).'... <br><a class="login_news_full" id="full_news-'.$n->id.'" href="#main_news-'.$n->id.'">See full details</a></div>';
                         echo '</div>';
+                        echo '<a href="#x" class="overlay" id="main_news-'.$n->id.'"></a>';
+                        echo '<div id="" class="main_news popup">'.$n->message.'<a class="close" href="#close"></a></div>';
                     }
                     ?>
                 </div>
@@ -100,6 +103,25 @@ echo $OUTPUT->doctype() ?>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
+
+    <div class="modal fade" id="show_news" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    hello ....
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="<?php echo $CFG->wwwroot?>/theme/soasdl/javascript/login.js"></script>
 
 </div>
