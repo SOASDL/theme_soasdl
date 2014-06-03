@@ -94,6 +94,42 @@ $(function(){
         $(actual_news).show();
 
     });
+    // end of login news
+
+    var deadlines = $('.deadline');
+    deadlines.each(function(){
+        var deadlines_children = this.children;
+        var deadlines_body = $(deadlines_children[1]);
+        deadlines_body.hide();
+    });
+
+    var all_deadline_head = $('.deadline_head');
+    all_deadline_head.on('click', function(){
+        var deadline_head_ids = this.id;
+        deadline_head_ids = deadline_head_ids.split('-');
+        var deadline_body = $('#deadline_body-'+deadline_head_ids[1]);
+        var arrow = $('#arrow-'+deadline_head_ids[1]);
+
+        deadline_body.slideToggle( "slow" );
+        if(arrow.hasClass('fa-angle-down') == true){
+            arrow.removeClass('fa-angle-down');
+            arrow.addClass('fa-angle-up');
+
+        }else{
+            arrow.removeClass('fa-angle-up');
+            arrow.addClass('fa-angle-down');
+        }
+    });
+
+    /*
+    see_details.click(function(){
+        var get_news_id = this.id.split('-');
+        news_id = get_news_id[1];
+        var actual_news = '#main_news-'+news_id;
+        $(actual_news).show();
+
+    });*/
+
 
 
 

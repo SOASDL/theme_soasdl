@@ -68,6 +68,45 @@ echo $OUTPUT->doctype() ?>
             <div class="row-fluid">
                 <div class="span6 login_left">
                     <div class="login_header"><span>Enrolment Deadlines</span></div>
+                    <div id="deadlines">
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for Financial and Management Studies</span></legend>
+                        <?php
+                        $deadlines = get_deadlines();
+                        foreach($deadlines as $d){
+                            if($d->dpt == 'cfms'){
+                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
+                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                echo '</div>';
+                            }
+                        }
+                        ?>
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for Development, Environment and Policy</span></legend>
+                        <?php
+                        foreach($deadlines as $d){
+                            if($d->dpt == 'cedep'){
+                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
+                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                echo '</div>';
+                            }
+                        }
+                        ?>
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for International Studies and Diplomacy</span></legend>
+                        <?php
+                        foreach($deadlines as $d){
+                            if($d->dpt == 'cisd'){
+                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
+                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                echo '</div>';
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
                 <div class="span6 login_right">
                     <div class="login_header"><span>Latest News</span></div>

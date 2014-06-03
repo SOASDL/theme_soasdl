@@ -186,3 +186,13 @@ function get_latest_news(){
 
     return $records;
 }
+
+function get_deadlines(){
+    global $DB;
+
+    $sql = 'select * from {deadlines} where publish = 1'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
