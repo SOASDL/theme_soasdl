@@ -66,7 +66,7 @@ echo $OUTPUT->doctype() ?>
     </nav>
 </header>
 
-<div id="page" class="container-fluid">
+<div id="page" class="container-fluid" style="position: relative; top: 40px">
 
     <header id="page-header" class="clearfix">
         <div id="page-navbar" class="clearfix">
