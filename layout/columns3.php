@@ -79,7 +79,7 @@ echo $OUTPUT->doctype() ?>
                             <li class="divider-vertical"></li>
                             <li><a href="#">Study Skills</a></li>
                             <li class="divider-vertical"></li>
-                            <li><a href="#">Library</a></li>
+                            <li><a href="http://external.shl.lon.ac.uk/" target="_blank">Library</a></li>
                             <li class="divider-vertical"></li>
                             <li><a href="#">Another external link</a></li>
                             <li class="divider-vertical"></li>
