@@ -199,3 +199,12 @@ function get_deadlines(){
 
     return $records;
 }
+function get_all_deadlines(){
+    global $DB;
+
+    $sql = 'select * from {deadlines}'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
