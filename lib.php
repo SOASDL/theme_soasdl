@@ -37,6 +37,9 @@
  * @param theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
+function theme_soasdl_page_init(moodle_page $page) {
+    $page->requires->jquery();
+}
 function theme_soasdl_process_css($css, $theme) {
 
     // Set the background image for the logo.
