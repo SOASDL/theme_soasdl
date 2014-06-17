@@ -67,43 +67,61 @@ echo $OUTPUT->doctype() ?>
         <section id="login_extra">
             <div class="row-fluid">
                 <div class="span6 login_left">
-                    <div class="login_header"><span>Enrolment Deadlines</span></div>
+                    <div class="login_header"><span><?php echo get_string('enrolment_deadlines','theme_soasdl')?></span></div>
                     <div id="deadlines">
-                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for Financial and Management Studies</span></legend>
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline"><?php echo get_string('cfms','theme_soasdl')?></span></legend>
                         <?php
                         $deadlines = get_deadlines();
+                        $cfms = '';
                         foreach($deadlines as $d){
                             if($d->dpt == 'cfms'){
-                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
-                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
-                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
-                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
-                                echo '</div>';
+                                $cfms .= '<div class="deadline" id="deadline-'.$d->id.'">';
+                                $cfms .= '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                $cfms .= $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                $cfms .= '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                $cfms .= '</div>';
                             }
                         }
+                        if($cfms != ''){
+                            echo $cfms;
+                        }else{
+                            echo '<div style="text-align:center">'.get_string('nothing_to_show','theme_soasdl').'</div>';
+                        }
                         ?>
-                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for Development, Environment and Policy</span></legend>
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline"><?php echo get_string('cedep','theme_soasdl')?></span></legend>
                         <?php
+                        $cedep = '';
                         foreach($deadlines as $d){
                             if($d->dpt == 'cedep'){
-                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
-                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
-                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
-                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
-                                echo '</div>';
+                                $cedep .= '<div class="deadline" id="deadline-'.$d->id.'">';
+                                $cedep .= '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                $cedep .= $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                $cedep .= '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                $cedep .= '</div>';
                             }
                         }
+                        if($cedep != ''){
+                            echo $cedep;
+                        }else{
+                            echo '<div style="text-align:center">'.get_string('nothing_to_show','theme_soasdl').'</div>';
+                        }
                         ?>
-                        <legend style="margin-bottom: 0px"><span class="dpt_deadline">Centre for International Studies and Diplomacy</span></legend>
+                        <legend style="margin-bottom: 0px"><span class="dpt_deadline"><?php echo get_string('cisd','theme_soasdl')?></span></legend>
                         <?php
+                        $cisd = '';
                         foreach($deadlines as $d){
                             if($d->dpt == 'cisd'){
-                                echo '<div class="deadline" id="deadline-'.$d->id.'">';
-                                echo '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
-                                echo $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
-                                echo '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
-                                echo '</div>';
+                                $cisd .= '<div class="deadline" id="deadline-'.$d->id.'">';
+                                $cisd .= '<div class="deadline_head" id="deadline_head-'.$d->id.'">';
+                                $cisd .= $d->title.'<span id="arrow-'.$d->id.'" style="float:right" class="fa fa-angle-down fa-2x"></span></div>';
+                                $cisd .= '<div class="deadline_body" id="deadline_body-'.$d->id.'">'.$d->description.'</div>';
+                                $cisd .= '</div>';
                             }
+                        }
+                        if($cisd != ''){
+                            echo $cisd;
+                        }else{
+                            echo '<div style="text-align:center">'.get_string('nothing_to_show','theme_soasdl').'</div>';
                         }
                         ?>
                     </div>

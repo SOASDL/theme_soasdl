@@ -65,4 +65,8 @@ $string['region-content'] = 'Content';
 $string['enrolment_deadlines']  = 'Enrolment Deadlines';
 $string['latest_news']          = 'Latest News';
 $string['see_full_details']     = 'See full details';
+$string['cfms']     = 'Centre for Financial and Management Studies';
+$string['cedep']    = 'Centre for Development, Environment and Policy';
+$string['cisd']     = 'Centre for International Studies and Diplomacy';
+$string['nothing_to_show']   = 'There is nothing to show!';
 
