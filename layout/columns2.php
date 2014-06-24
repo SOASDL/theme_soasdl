@@ -50,7 +50,7 @@ echo $OUTPUT->doctype() ?>
                     <li class="divider-vertical"></li>
                     <li><a href="http://external.shl.lon.ac.uk/" target="_blank">Library</a></li>
                     <li class="divider-vertical"></li>
-                    <li><a href="#">Another external link</a></li>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/faq.php">FAQ</a></li>
                     <li class="divider-vertical"></li>
                     <li><a href="#">Another external link</a></li>
                     <li class="divider-vertical"></li>
