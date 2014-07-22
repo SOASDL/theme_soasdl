@@ -83,7 +83,7 @@ echo $OUTPUT->doctype() ?>
                             <li class="divider-vertical"></li>
                             <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/view.php">FAQ</a></li>
                             <li class="divider-vertical"></li>
-                            <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasmail/mailbox.php">Mail</a></li>
+                            <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Mail</a></li>
                             <li class="divider-vertical"></li>
                         </ul>
 
