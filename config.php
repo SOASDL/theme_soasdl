@@ -38,7 +38,7 @@ $THEME->name = 'soasdl';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom','font-awesome','soasdlfonts', 'calendar');
+$THEME->sheets = array('custom','font-awesome','soasdlfonts', 'calendar', 'jquery.dataTables.min');
 //$THEME->sheets = array('custom','soasdlfonts', 'calendar');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
@@ -61,7 +61,7 @@ $THEME->blockrtlmanipulations = array(
 $THEME->javascripts = array(
 );
 $THEME->javascripts_footer = array(
-    'jquery-1.11.0.min','soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal'
+    'jquery-1.11.0.min','soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min'
     //'jquery-1.11.0.min','soasdl','bootstrap-tab'
 );
 
