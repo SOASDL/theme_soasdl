@@ -208,3 +208,11 @@ function get_all_deadlines(){
 
     return $records;
 }
+
+function get_msg_un_read_count(){
+    global $DB, $USER;
+
+    $record = $DB->count_records('message', array('useridto' => $USER->id));
+
+    return $record;
+}

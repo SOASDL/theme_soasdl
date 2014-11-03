@@ -16,6 +16,7 @@
 
 // Get the HTML for the settings bits.
 $html = theme_soasdl_get_html_for_settings($OUTPUT, $PAGE);
+//require_once('../lib.php');
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -51,7 +52,10 @@ echo $OUTPUT->doctype() ?>
                     <li class="divider-vertical"></li>
                     <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/view.php">FAQ</a></li>
                     <li class="divider-vertical"></li>
-                    <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Mail</a></li>
+                    <?php
+                    $new_msg = get_msg_un_read_count();
+                    ?>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Mail <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
                     <li class="divider-vertical"></li>
                 </ul>
 
