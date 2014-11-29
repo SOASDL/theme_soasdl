@@ -34,7 +34,7 @@ echo $OUTPUT->doctype() ?>
 <header role="banner" id="my_header" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>">Home</a>
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>">My Modules</a>
             <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -42,13 +42,9 @@ echo $OUTPUT->doctype() ?>
             </a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#">My Course</a></li>
+                    <li id="menu_profile"><a href="<?php echo $CFG->wwwroot;?>/user/profile.php">My Profile</a></li>
                     <li class="divider-vertical"></li>
-                    <li><a href="#">My Profile</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="#">Study Skills</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a href="http://external.shl.lon.ac.uk/" target="_blank">Library</a></li>
+                    <li id="menu_library"><a href="http://external.shl.lon.ac.uk/summon/index.php" target="_blank">Library</a></li>
                     <li class="divider-vertical"></li>
                     <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/view.php">FAQ</a></li>
                     <li class="divider-vertical"></li>
