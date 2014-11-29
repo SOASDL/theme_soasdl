@@ -42,7 +42,7 @@ echo $OUTPUT->doctype() ?>
             </a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#">My Course</a></li>
+                    <li class="active"><a href="<?php echo $CFG->wwwroot;?>">My Course</a></li>
                     <li class="divider-vertical"></li>
                     <li><a href="<?php echo $CFG->wwwroot;?>/user/profile.php">My Profile</a></li>
                     <li class="divider-vertical"></li>
