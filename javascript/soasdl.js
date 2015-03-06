@@ -8,4 +8,5 @@ $(function(){
             header.removeClass('navbar-fixed-top');
         }
     });
+    $('#myModal').modal('show');
 });

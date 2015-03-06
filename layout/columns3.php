@@ -134,6 +134,22 @@ echo $OUTPUT->doctype() ?>
         ?>
     </footer>
 
+    <div id="myModal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Welcome to your e-learning Centre</h3>
+        </div>
+        <div class="modal-body">
+            <p>If this is your first visit, please go to the FAQ section where you can explore the features available here.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <label style="float: left"><input type="checkbox">Do not show this again!</label>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <a href="<?php echo $CFG->wwwroot?>/local/faq/view.php" class="btn btn-primary">Go to FAQ</a>
+        </div>
+    </div>
+
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
 </div>
