@@ -22,7 +22,7 @@ $(function(){
             url: base_url+"/theme/soasdl/ajax.php?function=update_user_choice_popup",
             data:{choice:choice}
         }).done(function(msg){
-            //alert(msg);
+            alert(msg);
         });
     });
 });
