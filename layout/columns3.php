@@ -136,9 +136,14 @@ echo $OUTPUT->doctype() ?>
 
 
     <?php
-    if (!$_SESSION['GoToFAQ']) {
+    /* ---------------------------- for first login popup ----------------------------------- */
+    global $USER;
+    $welcome = get_config('welcome_to_soasdl', $USER->id);
+    if(!$welcome){
+        //if (!$_SESSION['GoToFAQ']) {
 
-        $_SESSION['GoToFAQ']=true;
+        //$_SESSION['GoToFAQ']=true;
+        echo '<input type="hidden" id="base_url" value="'.$CFG->wwwroot.'">';
 
         ?>
         <div id="myModal" class="modal hide fade">
@@ -151,15 +156,18 @@ echo $OUTPUT->doctype() ?>
                 </p>
             </div>
             <div class="modal-footer">
-                <label style="float: left"><input type="checkbox">Do not show this again!</label>
+                <label style="float: left"><input type="checkbox" id="doNotShow">Do not show this again!</label>
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                 <a href="<?php echo $CFG->wwwroot?>/local/faq/view.php" class="btn btn-primary">Go to FAQ</a>
             </div>
         </div>
-    <?php
+        <?php
 
+        //}
     }
 
+
+    /* ---------------------------- end of first login popup ----------------------------------- */
     ?>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
