@@ -82,7 +82,7 @@ echo $OUTPUT->doctype() ?>
                             <?php
                             $new_msg = get_msg_un_read_count();
                             ?>
-                            <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Mail <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
+                            <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Message <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
                             <li class="divider-vertical"></li>
                         </ul>
 
@@ -133,6 +133,42 @@ echo $OUTPUT->doctype() ?>
         echo $OUTPUT->standard_footer_html();
         ?>
     </footer>
+
+
+    <?php
+    /* ---------------------------- for first login popup ----------------------------------- */
+    global $USER;
+    $welcome = get_config('welcome_to_soasdl', $USER->id);
+    if(!$welcome){
+        if (!$_SESSION['GoToFAQ']) {
+
+            $_SESSION['GoToFAQ']=true;
+            echo '<input type="hidden" id="base_url" value="'.$CFG->wwwroot.'">';
+
+            ?>
+            <div id="myModal" class="modal hide fade">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3>Welcome to your e-learning Centre</h3>
+                </div>
+                <div class="modal-body">
+                    <p>If this is your first visit, please go to the FAQ section where you can explore the features available here.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <label style="float: left"><input type="checkbox" id="doNotShow">Do not show this again!</label>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <a href="<?php echo $CFG->wwwroot?>/local/faq/view.php" class="btn btn-primary">Go to FAQ</a>
+                </div>
+            </div>
+            <?php
+
+        }
+    }
+
+
+    /* ---------------------------- end of first login popup ----------------------------------- */
+    ?>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 

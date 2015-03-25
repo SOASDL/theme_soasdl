@@ -84,3 +84,12 @@ body {
 
 
 /*==============================================================*/
+
+
+.admintable th a {
+    color: #ffffff;
+}
+
+.admintable th{
+    color: #ffffff;
+}

@@ -242,7 +242,9 @@
 }
 
 .dpt_deadline {
-    padding-left: 10px;
     color: #00859B;
     font-weight: bold;
+}
+#deadlines{
+    margin-left: 10px;
 }

@@ -51,7 +51,7 @@ echo $OUTPUT->doctype() ?>
                     <?php
                     $new_msg = get_msg_un_read_count();
                     ?>
-                    <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Mail <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Message <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
                     <li class="divider-vertical"></li>
                 </ul>
 
