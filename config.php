@@ -77,6 +77,11 @@ $THEME->layouts = array(
         'file' => 'login.php',
         'regions' => array(),
         'options' => array('langmenu'=>true),
+    ),
+    'mypublic' => array(
+        'file' => 'profile.php',
+        'regions' => array('side-pre', 'side-post'),
+        'defaultregion' => 'side-pre',
     )
 );
 
