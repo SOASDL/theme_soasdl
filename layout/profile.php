@@ -27,6 +27,7 @@
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+require_once("$CFG->dirroot/local/history/lib.php");
 
 // Get the HTML for the settings bits.
 $html = theme_soasdl_get_html_for_settings($OUTPUT, $PAGE);
@@ -115,6 +116,7 @@ echo $OUTPUT->doctype() ?>
                     echo $OUTPUT->course_content_header();
                     echo $OUTPUT->main_content();
                     echo $OUTPUT->course_content_footer();
+                    echo show_history();
                     ?>
                 </section>
                 <?php echo $OUTPUT->blocks('side-pre', 'span4 desktop-first-column'); ?>
@@ -134,41 +136,6 @@ echo $OUTPUT->doctype() ?>
         ?>
     </footer>
 
-
-    <?php
-    /* ---------------------------- for first login popup ----------------------------------- */
-    global $USER;
-    $welcome = get_config('welcome_to_soasdl', $USER->id);
-    if(!$welcome){
-        if (!$_SESSION['GoToFAQ']) {
-
-            $_SESSION['GoToFAQ']=true;
-            echo '<input type="hidden" id="base_url" value="'.$CFG->wwwroot.'">';
-
-            ?>
-            <div id="myModal" class="modal hide fade">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Welcome to your e-learning Centre</h3>
-                </div>
-                <div class="modal-body">
-                    <p>If this is your first visit, please go to the FAQ section where you can explore the features available here.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <label style="float: left"><input type="checkbox" id="doNotShow">Do not show this again!</label>
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                    <a href="<?php echo $CFG->wwwroot?>/local/faq/view.php" class="btn btn-primary">Go to FAQ</a>
-                </div>
-            </div>
-            <?php
-
-        }
-    }
-
-
-    /* ---------------------------- end of first login popup ----------------------------------- */
-    ?>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
