@@ -116,7 +116,7 @@ echo $OUTPUT->doctype() ?>
                     echo $OUTPUT->course_content_header();
                     echo $OUTPUT->main_content();
                     echo $OUTPUT->course_content_footer();
-                    echo show_history();
+                    echo show_history();// get previous study history from local history plugin.
                     ?>
                 </section>
                 <?php echo $OUTPUT->blocks('side-pre', 'span4 desktop-first-column'); ?>
