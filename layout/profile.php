@@ -117,7 +117,14 @@ echo $OUTPUT->doctype() ?>
                     echo $OUTPUT->course_content_header();
                     echo $OUTPUT->main_content();
                     echo $OUTPUT->course_content_footer();
-                    echo show_history();// get previous study history from local history plugin.
+                    if (isset($_GET['id'])){ // just to check I am not watching someone else's profile
+                        $user_id = $_GET['id'];
+                        if($user_id == $USER->id){ // just to check I am not watching someone else's profile
+                            echo show_history();// get previous study history from local history plugin.
+                        }
+                    }else{
+                        echo show_history();// get previous study history from local history plugin.
+                    }
                     ?>
                 </section>
                 <?php echo $OUTPUT->blocks('side-pre', 'span4 desktop-first-column'); ?>
