@@ -25,7 +25,7 @@ echo $OUTPUT->doctype() ?>
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $CFG->wwwroot;?>/theme/soasdl/style/login.css">
-
+    <script>var user_auth = ''</script>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
