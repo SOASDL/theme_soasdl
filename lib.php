@@ -183,7 +183,7 @@ function get_latest_news(){
             from mdl_forum_posts post
             INNER JOIN mdl_forum_discussions discus
             ON discus.firstpost = post.id
-            where discus.course = 1'; // course id 1 is site
+            where discus.course = 1 ORDER BY post.id DESC'; // course id 1 is site
 
     $records = $DB->get_records_sql($sql);
 
