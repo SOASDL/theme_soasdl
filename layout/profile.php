@@ -120,9 +120,11 @@ echo $OUTPUT->doctype() ?>
                     if (isset($_GET['id'])){ // just to check I am not watching someone else's profile
                         $user_id = $_GET['id'];
                         if($user_id == $USER->id){ // just to check I am not watching someone else's profile
+                            echo show_address(); // from unitE
                             echo show_history();// get previous study history from local history plugin.
                         }
                     }else{
+                        echo show_address(); // from unitE
                         echo show_history();// get previous study history from local history plugin.
                     }
                     ?>
