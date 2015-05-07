@@ -129,7 +129,8 @@ echo $OUTPUT->doctype() ?>
                 <div class="span6 login_right">
                     <div class="login_header"><span>Latest News</span></div>
                     <?php
-                    $news = get_latest_news();
+                    $news   = get_latest_news();
+                    $i      = 1;
                     foreach($news as $n){
                         echo '<div class="login_news" id="news-'.$n->id.'">';
                         echo '<div class="login_news_head" id="news_head-'.$n->id.'">';
@@ -140,6 +141,10 @@ echo $OUTPUT->doctype() ?>
                         echo '</div>';
                         echo '<a href="#x" class="overlay" id="main_news-'.$n->id.'"></a>';
                         echo '<div id="" class="main_news popup">'.$n->message.'<a class="close" href="#close"></a></div>';
+                        if($i == 6){
+                            break; // exit from the loop
+                        }
+                        $i++;
                     }
                     ?>
                 </div>
