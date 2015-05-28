@@ -86,6 +86,8 @@ echo $OUTPUT->doctype() ?>
                             ?>
                             <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Message <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
                             <li class="divider-vertical"></li>
+                            <li><a href="<?php echo $CFG->wwwroot;?>/local/soasdl_feedback">My Help</a></li>
+                            <li class="divider-vertical"></li>
                         </ul>
 
                         <?php echo $OUTPUT->custom_menu(); ?>
