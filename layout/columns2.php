@@ -25,6 +25,7 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>var user_auth = '<?php echo $USER->auth;?>'</script>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
@@ -34,13 +35,29 @@ echo $OUTPUT->doctype() ?>
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>">My Modules</a>
+            <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
             <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li id="menu_profile"><a href="<?php echo $CFG->wwwroot;?>/user/profile.php">My Profile</a></li>
+                    <li class="divider-vertical"></li>
+                    <li id="menu_library"><a href="http://external.shl.lon.ac.uk/summon/index.php" target="_blank">Library</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/view.php">FAQ</a></li>
+                    <li class="divider-vertical"></li>
+                    <?php
+                    $new_msg = get_msg_un_read_count();
+                    ?>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/blocks/soasdl_message/message_centre.php">Message <span class="badge badge-important"><?php echo (($new_msg)? $new_msg : '')?></span></a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="<?php echo $CFG->wwwroot;?>/local/soasdl_feedback">My Help</a></li>
+                    <li class="divider-vertical"></li>
+                </ul>
+
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
@@ -51,7 +68,7 @@ echo $OUTPUT->doctype() ?>
     </nav>
 </header>
 
-<div id="page" class="container-fluid">
+<div id="page" class="container-fluid" style="position: relative; top: 40px">
 
     <header id="page-header" class="clearfix">
         <div id="page-navbar" class="clearfix">

@@ -38,7 +38,8 @@ $THEME->name = 'soasdl';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom');
+$THEME->sheets = array('custom','font-awesome','soasdlfonts', 'calendar', 'jquery.dataTables.min','jquery-ui', 'jstree/style.min', 'chosen.min');
+//$THEME->sheets = array('custom','soasdlfonts', 'calendar');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 
@@ -57,3 +58,31 @@ $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
 );
+$THEME->javascripts = array(
+);
+$THEME->javascripts_footer = array(
+    'jquery-1.11.0.min','soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min','jquery-ui.min', 'chosen.jquery.min', 'jstree.min', 'chosen.ajaxaddition.jquery'
+    //'jquery-1.11.0.min','soasdl','bootstrap-tab'
+);
+
+$THEME->layouts = array(
+    // My dashboard page.
+    'mydashboard' => array(
+        'file' => 'columns3.php',
+        'regions' => array('side-pre', 'side-post', 'content'),
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu'=>true),
+    ),
+    'login' => array(
+        'file' => 'login.php',
+        'regions' => array(),
+        'options' => array('langmenu'=>true),
+    ),
+    'mypublic' => array(
+        'file' => 'profile.php',
+        'regions' => array('side-pre', 'side-post'),
+        'defaultregion' => 'side-pre',
+    )
+);
+
+//$THEME->enable_dock = true;

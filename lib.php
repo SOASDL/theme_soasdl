@@ -37,6 +37,9 @@
  * @param theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
+function theme_soasdl_page_init(moodle_page $page) {
+    $page->requires->jquery();
+}
 function theme_soasdl_process_css($css, $theme) {
 
     // Set the background image for the logo.
@@ -171,4 +174,45 @@ function soasdl_set_logo($css, $logo) {
 function soasdl_set_customcss($css, $customcss) {
     debugging('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__, DEBUG_DEVELOPER);
     return theme_soasdl_set_customcss($css, $customcss);
+}
+
+function get_latest_news(){
+    global $DB;
+
+    $sql = 'select post.id as id, post.subject as subject, post.message as message, post.modified as date
+            from mdl_forum_posts post
+            INNER JOIN mdl_forum_discussions discus
+            ON discus.firstpost = post.id
+            where discus.course = 1 ORDER BY post.id DESC'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
+
+function get_deadlines(){
+    global $DB;
+
+    $sql = 'select * from {deadlines} where publish = 1'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
+function get_all_deadlines(){
+    global $DB;
+
+    $sql = 'select * from {deadlines}'; // course id 1 is site
+
+    $records = $DB->get_records_sql($sql);
+
+    return $records;
+}
+
+function get_msg_un_read_count(){
+    global $DB, $USER;
+
+    $record = $DB->count_records('message', array('useridto' => $USER->id));
+
+    return $record;
 }
