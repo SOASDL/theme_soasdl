@@ -61,7 +61,7 @@ $THEME->blockrtlmanipulations = array(
 $THEME->javascripts = array(
 );
 $THEME->javascripts_footer = array(
-    'jquery-1.11.0.min','soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min','jquery-ui.min', 'chosen.jquery.min', 'jstree.min', 'chosen.ajaxaddition.jquery'
+    'soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min','jquery-ui.min', 'chosen.jquery.min', 'jstree.min', 'chosen.ajaxaddition.jquery', 'jquery.nestable'
     //'jquery-1.11.0.min','soasdl','bootstrap-tab'
 );
 
