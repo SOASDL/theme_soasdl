@@ -152,4 +152,12 @@ body {
 
 .ctopics h3 {
     font-size: 16px;
+    line-height: 7px;
+}
+/*
+.course-content ul li.section.main{
+    border-bottom: none;
+}*/
+.ctopics .right {
+    display: none;
 }
