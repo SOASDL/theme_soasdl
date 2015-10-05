@@ -150,3 +150,10 @@ body {
  * Nestable finished
  */
 
+.course-content ul.ctopics li.section .content .toggle a h3.sectionname, .course-content ul.ctopics li.section.hidden .content {
+    margin: 1px;
+}
+.ctopics h3 {
+    font-size: 16px;
+    line-height: 15px;
+}
