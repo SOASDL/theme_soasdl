@@ -73,6 +73,12 @@ $THEME->layouts = array(
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
+    // part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'admin.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+    ),
     'login' => array(
         'file' => 'login.php',
         'regions' => array(),
