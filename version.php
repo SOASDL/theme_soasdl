@@ -30,7 +30,7 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2013050100;
+$plugin->version   = 2015102900;//Ymd00
 $plugin->requires  = 2013050100;
 $plugin->component = 'theme_soasdl';
 $plugin->dependencies = array(
