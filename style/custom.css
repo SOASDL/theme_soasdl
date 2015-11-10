@@ -160,3 +160,6 @@ body {
 .topics.content h3{
     font-size: 20px;
 }
+.forumpost .header a{
+    color:#ffffff;
+}
