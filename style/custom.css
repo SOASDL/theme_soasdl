@@ -163,3 +163,6 @@ body {
 .forumpost .header a{
     color:#ffffff;
 }
+#page-content {
+    min-height: 600px;
+}
