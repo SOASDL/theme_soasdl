@@ -128,21 +128,6 @@ echo $OUTPUT->doctype() ?>
 
     <footer id="page-footer" class="row-fluid">
         <?php echo soasdl_footer();?>
-        <!--<div class="span6" style="float: left">
-            <img src="<?php /*echo $OUTPUT->pix_url('ble', 'theme'); */?>" style="width: 150px;float: left" alt="SOAS Distance Learning" />
-        </div>
-        <div class="span6" style="float: right; text-align: right">
-            <?php /*echo '<div class="sitelink">Powered by <a title="Moodle" href="http://moodle.org">Moodle</a> ' . $CFG->release . ' hosted by <a title="University of London Computer Centre" href="http://www.ulcc.ac.uk">ULCC</a>.</div>';*/?>
-            <div>In partnership with the <a href="http://www.bloomsbury.ac.uk/ble">Bloomsbury Learning Environment</a><br>
-                &copy; SOAS, University of London 2012-13
-            </div>
-            <div id="course-footer"><?php /*echo $OUTPUT->course_footer(); */?></div>
-            <?php
-/*            echo $html->footnote;
-            echo $OUTPUT->login_info();
-            echo $OUTPUT->standard_footer_html();
-            */?>
-        </div>-->
     </footer>
 
 
