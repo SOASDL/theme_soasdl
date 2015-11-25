@@ -89,7 +89,7 @@ echo $OUTPUT->doctype() ?>
             $filename = substr($_SERVER['SCRIPT_FILENAME'],-14);
             //var_dump($filename);
             if($filename == '/user/edit.php'){
-                echo '<p style="color: red"><strong>On this page you can update some elements of your Profile including your profile picture. You cannot change your name or email address. These details are automatically updated from the student record system.  To change your email address, despatch address and contact details you must send the details to cedepadmin@soas.ac.uk</strong></p>';
+                echo '<p style="color: red"><strong>On this page you can update some elements of your Profile including your profile picture. You cannot change your name or email address. These details are automatically updated from the student record system.  To change your email address, despatch address and contact details you must send the details to distancelearning@soas.ac.uk</strong></p>';
             }
             echo $OUTPUT->main_content();
             echo $OUTPUT->course_content_footer();
@@ -105,14 +105,7 @@ echo $OUTPUT->doctype() ?>
     </div>
 
     <footer id="page-footer">
-        <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
-        <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
-        <?php
-        echo $html->footnote;
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+        <?php echo soasdl_footer();?>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
