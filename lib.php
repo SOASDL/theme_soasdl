@@ -227,7 +227,7 @@ function soasdl_footer(){
     $html .= '<img src="'.$OUTPUT->pix_url('ble', 'theme').'" style="width: 150px;float: left" alt="SOAS Distance Learning" /></div>';
     $html .= '<div class="span6" style="float: right; text-align: right">';
     $html .= '<div class="sitelink">Powered by <a title="Moodle" href="http://moodle.org">Moodle</a> hosted by <a title="University of London Computer Centre" href="http://www.ulcc.ac.uk">ULCC</a>.</div>';
-    $html .= '<div>In partnership with the <a href="http://www.bloomsbury.ac.uk/ble">Bloomsbury Learning Environment</a><br>&copy; SOAS University of London</div>';
+    $html .= '<div>In partnership with the <a href="http://www.bloomsbury.ac.uk/ble">Bloomsbury Learning Environment (BLE)</a><br>&copy; SOAS University of London</div>';
     $html .= '<div id="course-footer">'.$OUTPUT->course_footer().'</div>';
 
     $html .= $soasdl_html->footnote;
