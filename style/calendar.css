@@ -10,7 +10,7 @@
     background: none repeat scroll 0 0 #cca1a6;
     border: medium solid;
     border-radius: 20px;
-    display: block;
+    /*display: block;*/
 }
 
 .calendar_event_course {

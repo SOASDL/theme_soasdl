@@ -16,8 +16,8 @@
 
 // Get the HTML for the settings bits.
 $html = theme_soasdl_get_html_for_settings($OUTPUT, $PAGE);
-//require_once('../lib.php');
 
+$left = (!right_to_left());  // To know if to add 'pull-right' and 'desktop-first-column' classes in the layout for LTR.
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
@@ -28,11 +28,11 @@ echo $OUTPUT->doctype() ?>
     <script>var user_auth = '<?php echo $USER->auth;?>'</script>
 </head>
 
-<body <?php echo $OUTPUT->body_attributes(); ?>>
+<body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" id="my_header" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
+<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
             <a class="brand" href="<?php echo $CFG->wwwroot;?>">My Modules</a>
@@ -68,7 +68,7 @@ echo $OUTPUT->doctype() ?>
     </nav>
 </header>
 
-<div id="page" class="container-fluid">
+<div id="page" class="container-fluid" style="position: relative; top: 40px">
 
     <header id="page-header" class="clearfix">
         <div id="page-navbar" class="clearfix">
@@ -82,13 +82,26 @@ echo $OUTPUT->doctype() ?>
     </header>
 
     <div id="page-content" class="row-fluid">
-        <section id="region-main" class="span12">
-            <?php
+        <section id="region-main" class="span9<?php if ($left) { echo ' pull-right'; } ?>">
+            <?php // few temporary message to student for updating their details.
             echo $OUTPUT->course_content_header();
+            //var_dump($_SERVER['SCRIPT_FILENAME']);
+            $filename = substr($_SERVER['SCRIPT_FILENAME'],-14);
+            //var_dump($filename);
+            if($filename == '/user/edit.php'){
+                echo '<p style="color: red"><strong>On this page you can update some elements of your Profile including your profile picture. You cannot change your name or email address. These details are automatically updated from the student record system.  To change your email address, despatch address and contact details you must send the details to distancelearning@soas.ac.uk</strong></p>';
+            }
             echo $OUTPUT->main_content();
             echo $OUTPUT->course_content_footer();
             ?>
         </section>
+        <?php
+        $classextra = '';
+        if ($left) {
+            $classextra = ' desktop-first-column';
+        }
+        echo $OUTPUT->blocks('side-pre', 'span3'.$classextra);
+        ?>
     </div>
 
     <footer id="page-footer">

@@ -61,7 +61,7 @@ $THEME->blockrtlmanipulations = array(
 $THEME->javascripts = array(
 );
 $THEME->javascripts_footer = array(
-    'jquery-1.11.0.min','soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min','jquery-ui.min', 'chosen.jquery.min', 'jstree.min', 'chosen.ajaxaddition.jquery'
+    'soasdl','bootstrap-tab','bootstrap-collapse','bootstrap-modal','jquery.dataTables.min','jquery-ui.min', 'chosen.jquery.min', 'jstree.min', 'chosen.ajaxaddition.jquery', 'jquery.nestable'
     //'jquery-1.11.0.min','soasdl','bootstrap-tab'
 );
 
@@ -73,10 +73,21 @@ $THEME->layouts = array(
         'defaultregion' => 'side-pre',
         'options' => array('langmenu'=>true),
     ),
+    // part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'admin.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+    ),
     'login' => array(
         'file' => 'login.php',
         'regions' => array(),
         'options' => array('langmenu'=>true),
+    ),
+    'admin' => array(
+        'file' => 'admin.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
     ),
     'mypublic' => array(
         'file' => 'profile.php',
