@@ -24,11 +24,12 @@ $(function(){
         })
     });
 
-    /*if(user_auth){
-        if(user_auth != 'manual'){
-            $("#id_email").prop('disabled', true);
-        }
-    }*/
+    //$( "#loginbtn" ).prependTo( ".loginform" );
+    //$('#loginbtn').remove();
+
+    //var login_button = $('#loginbtn');
+    //login_button.prependTo( ".loginform" );
+
 
 
 

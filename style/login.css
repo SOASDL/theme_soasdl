@@ -151,6 +151,8 @@
 .login_tab_content .loginform{
     display: table;
     margin: 0 auto;
+    float: left;
+    width: 100%;
 }
 .loginform > div {
     float: left;
@@ -158,7 +160,6 @@
 }
 
 #loginbtn {
-    margin-left: 25px;
     background: none repeat scroll 0 0 #2E9FB1;
     border: #2E9FB1;
     color: #ffffff;
