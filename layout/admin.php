@@ -89,7 +89,7 @@ echo $OUTPUT->doctype() ?>
             $filename = substr($_SERVER['SCRIPT_FILENAME'],-14);
             //var_dump($filename);
             if($filename == '/user/edit.php'){
-                echo '<p style="color: red"><strong>On this page you can update some elements of your profile including your profile picture. To change your name, despatch address or permanent address or email, click here to go to the Student Records Online Service</strong></p>';
+                echo '<p style="color: red"><strong>On this page you can update some elements of your profile including your profile picture. To change your name, despatch address or permanent address or email, <a target="_blank" href="https://studentsonline.soas.ac.uk/WebSite/OnlineServices/default.aspx">click here</a> to go to the <a target="_blank" href="https://studentsonline.soas.ac.uk/WebSite/OnlineServices/default.aspx">Student Records Online Service</a></strong></p>';
             }
             echo $OUTPUT->main_content();
             echo $OUTPUT->course_content_footer();
