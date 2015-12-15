@@ -26,7 +26,6 @@ $(function(){
 
     if(user_auth){
         if(user_auth != 'manual'){
-            //$("#id_email").prop('disabled', true);
             $("#id_email").prop('readonly', true);
         }
     }
