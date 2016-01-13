@@ -26,6 +26,14 @@ echo $OUTPUT->doctype() ?>
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>var user_auth = '<?php echo $USER->auth;?>'</script>
+    <?php
+    $filename = substr($_SERVER['SCRIPT_FILENAME'],-14);
+    if($filename == '/user/edit.php'){
+        echo '<script>email_lock = true;</script>';
+    }else{
+        echo '<script>email_lock = false;</script>';
+    }
+    ?>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
