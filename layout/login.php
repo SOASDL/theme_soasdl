@@ -26,6 +26,7 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $CFG->wwwroot;?>/theme/soasdl/style/login.css">
     <script>var user_auth = ''</script>
+    <script>var email_lock = false;</script>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
