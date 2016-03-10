@@ -46,7 +46,7 @@ echo $OUTPUT->doctype() ?>
                 <ul class="nav">
                     <li id="menu_profile"><a href="<?php echo $CFG->wwwroot;?>/user/profile.php">My Profile</a></li>
                     <li class="divider-vertical"></li>
-                    <li id="menu_library"><a href="http://external.shl.lon.ac.uk/summon/index.php" target="_blank">Library</a></li>
+                    <li id="menu_library"><a href="http://onlinelibrary.london.ac.uk/" target="_blank">Library</a></li>
                     <li class="divider-vertical"></li>
                     <li><a href="<?php echo $CFG->wwwroot;?>/local/faq/view.php">FAQ</a></li>
                     <li class="divider-vertical"></li>
