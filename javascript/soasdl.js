@@ -25,12 +25,12 @@ $(function(){
     });
 
     // do not allow students to change their email address.
-    if(user_auth){
-        if(user_auth != 'manual'){
-            $("#id_email").prop('readonly', true);
+    if(email_lock == true){
+        if(user_auth){
+            if(user_auth != 'manual'){
+                $("#id_email").prop('readonly', true);
+            }
         }
     }
-
-
 
 });
